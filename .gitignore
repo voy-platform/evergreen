@@ -3,7 +3,7 @@ node_modules
 .DS_Store
 coverage
 /commonjs/
-/esm/
+# /esm/
 /umd/
 /.out/
 .cache
