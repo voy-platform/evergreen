@@ -13,7 +13,8 @@ const noop = () => {}
  * @see https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
  */
 const style = {
-  '-webkit-font-smoothing': 'antialiased'
+//   Remove this -- it gives fatal error because of missing dashes (and is also just not needed)
+//   '-webkit-font-smoothing': 'antialiased'
 }
 
 const SearchTableHeaderCell = memo(
