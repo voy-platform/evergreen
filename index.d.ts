@@ -55,6 +55,7 @@ export type CodeAppearance = DefaultAppearance | 'minimal'
 export type CheckboxAppearance = DefaultAppearance
 export type IconButtonAppearance = DefaultAppearance | 'minimal' | 'primary'
 export type TextInputAppearance = DefaultAppearance | 'primary'
+export type DateInputAppearance = DefaultAppearance | 'primary'
 export type TooltipAppearance = DefaultAppearance | 'card'
 export type PositionState = 'exited' | 'entering' | 'entered' | 'exiting'
 export type FontFamily = 'ui' | 'display' | 'mono'
@@ -2667,6 +2668,85 @@ export interface TextInputFieldOwnProps extends FormFieldOwnProps {
 
 export type TextInputFieldProps = PolymorphicBoxProps<'input', TextInputFieldOwnProps>
 export declare const TextInputField: BoxComponent<TextInputFieldOwnProps, 'input'>
+
+export interface DateInputOwnProps {
+  /**
+   * Makes the input element required.
+   */
+  required?: boolean
+  /**
+   * Makes the input element disabled.
+   */
+  disabled?: boolean
+  /**
+   * Sets visual styling of _only_ the text input to be "invalid".
+   * Note that this does not effect any `validationMessage`.
+   */
+  isInvalid?: boolean
+  /**
+   * The appearance of the DateInput.
+   */
+  appearance?: DateInputAppearance
+  /**
+   * The width of the DateInput.
+   */
+  width?: string | number
+  /**
+   * Class name passed to the button.
+   */
+  className?: string
+  /**
+   * Size of the input
+   */
+  size?: 'small' | 'medium' | 'large'
+}
+
+export type DateInputProps = PolymorphicBoxProps<'input', DateInputOwnProps>
+export declare const DateInput: BoxComponent<DateInputOwnProps, 'input'>
+
+export interface DateInputFieldOwnProps extends FormFieldOwnProps {
+  /**
+   * The label used above the input element.
+   */
+  label?: React.ReactNode
+  /**
+   * Passed on the label as a htmlFor prop.
+   */
+  labelFor?: string
+  /**
+   * Whether or not show a asterix after the label.
+   */
+  required?: boolean
+  /**
+   * Whether or not the field is invalid
+   */
+  isInvalid?: boolean
+  /**
+   * A optional description of the field under the label, above the input element.
+   */
+  description?: React.ReactNode
+  /**
+   * A optional hint under the input element.
+   */
+  hint?: React.ReactNode
+  /**
+   * If a validation message is passed it is shown under the input element
+   * and above the hint.
+   */
+  validationMessage?: React.ReactNode
+  /**
+   * The height of the input element.
+   */
+  inputHeight?: number
+  /**
+   * The width of the input width.
+   */
+  inputWidth?: number | string
+}
+
+export type DateInputFieldProps = PolymorphicBoxProps<'input', DateInputFieldOwnProps>
+export declare const DateInputField: BoxComponent<DateInputFieldOwnProps, 'input'>
+
 
 export interface TooltipStatelessProps extends PaneOwnProps {
   /**

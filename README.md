@@ -14,6 +14,10 @@ Example: `yarn create-package:components date-input DateInput DateInputField`
 
 Just copy stuff from another one; use UI-box because types are nice
 
+## Step 2.5: Add the types to `index.d.ts`
+
+- this is just straight up awful... but you have to do it!
+
 ## Step 3: Build
 
 ```sh

@@ -76,6 +76,7 @@ export {
 export { Tab, Tablist, TabNavigation } from './tabs'
 export { TagInput } from './tag-input'
 export { TextInput, TextInputField } from './text-input'
+export { DateInput, DateInputField } from './date-input'
 export { ThemeContext, ThemeProvider, ThemeConsumer, getThemeContext, withTheme, useTheme, mergeTheme } from './theme'
 export { usePaginationBehavior, Pagination } from './pagination'
 export { defaultTheme } from './themes'
